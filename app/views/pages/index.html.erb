@@ -1,27 +1,37 @@
-<nav class="p-1 bg-white shadow md:flex md:items-center md:justify-around">
-  <ul class="md:flex md:items-center text-yellow-500">
-    <li class="mx-5 text-lg font-bold my-6 md:my-0">
-      <a href="#" class="text-x1 hover:text-cyan-500 duration-500"> INICIO</a>
-    </li>
-    <li class="mx-5 text-lg font-bold my-6 md:my-0">
-      <a href="#" class="text-x1 hover:text-cyan-500 duration-500"> EQUIPOS</a>
-    </li>
+<nav class="px-3 py-1 bg-white"> <!--shadow md:flex md:items-center md:justify-around-->
+<!--contiene elementos del navbar-->
+ <div class="max-w-6xl mx-auto border border-red-400 bg-slate-400">
+    <div class="flex items-center justify-around">
+      <ul class="bg-white md:flex md:items-center text-yellow-500 z-[-1] md:z-auto md:static absolute">
+      <%# primary menu %>
+        <li class="mx-5 text-lg font-bold my-6 md:my-0">
+          <a href="#" class="text-x1 hover:underline"> INICIO</a>
+        </li>
+        <li class="mx-5 text-lg font-bold my-6 md:my-0">
+          <a href="#" class="text-x1 hover:underline"> EQUIPOS</a>
+        </li>
+      </ul>
 
-    <div class="mx-5">
-      <span class="text-2x1 font-[Poppins] cursor-pointer">
-        <img class="h-32 inline" src="https://pbs.twimg.com/profile_images/1445361197331668992/I3I9E2gA_400x400.png" alt="inter-lima">
-      </span>
+      <!--logo-->
+      <div class="mx-5">
+        <span class="cursor-pointer">
+          <img class="h-32 inline" src="https://pbs.twimg.com/profile_images/1445361197331668992/I3I9E2gA_400x400.png" alt="inter-lima">
+        </span>
+      </div>
+      <%# secondary menu %>
+      <ul class="bg-white md:flex md:items-center text-yellow-500 z-[-1] md:z-auto md:static absolute">
+        <li class="mx-5 text-lg font-bold my-6 md:my-0">
+          <a href="#" class="text-x1 hover:underline"> NOSOTROS</a>
+        </li>
+        <li class="mx-5 text-lg font-bold my-6 md:my-0">
+          <a href="#" class="text-x1 hover:underline"> CONTACTO</a>
+        </li>
+      </ul>
     </div>
-
-    <li class="mx-5 text-lg font-bold my-6 md:my-0">
-      <a href="#" class="text-x1 hover:text-cyan-500 duration-500"> NOSOTROS</a>
-    </li>
-
-    <li class="mx-5 text-lg font-bold my-6 md:my-0">
-      <a href="#" class="text-x1 hover:text-cyan-500 duration-500"> CONTACTO</a>
-    </li>
-  </ul>
-
+  </div>
 </nav>
 
-<h1> Blog de Inter de Lima</h1>
+<div class="bg-slate-500 flex flex-col items-center py-5 px-3"> <!-- El color plomo es para visualizar el div-->
+  <p class="text-2xl font-bold"> SOMOS </p><br>
+  <p class="text-4xl text-yellow-500 font-bold "> INTER DE LIMA </p>
+</div>

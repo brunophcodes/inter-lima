@@ -10,7 +10,7 @@
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
   </head>
-
+  <%= render 'layouts/navbar' %>
   <body class="bg-black text-white">
     <%= yield %>
     <% flash.each do |name, msg| %>

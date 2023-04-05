@@ -11,7 +11,8 @@
     <%= javascript_importmap_tags %>
   </head>
   <%= render 'layouts/navbar' %>
-  <body class="bg-black text-white">
+  <!--flex col y min h screen para tener el footer siempre al final-->
+  <body class="bg-black text-white flex flex-col min-h-screen">
     <%= yield %>
     <% flash.each do |name, msg| %>
       <ul>
@@ -19,4 +20,5 @@
       </ul>
     <% end %>
   </body>
+  <%= render 'layouts/footer' %>
 </html>

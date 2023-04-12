@@ -1,10 +1,12 @@
-<h1>Showing selected article</h1>
-<div>
-  <%# image tag %>
-  <p>
-    Photo: <%= @article.photo %>
-  </p>
-  <p>
-    Title: <%= @article.title %>
-  </p>
+<!--div wrapper-->
+<div class="flex flex-col my-6 py-6">
+  <p class="text-center py-6 text-xl">Mostrando noticia seleccionada</p>
+  <div class="flex flex-col items-center justify-center">
+    <div class="max-w-xl overflow-hidden shadow-lg rounded-lg">
+      <%=image_tag(@article.photo)%>
+      <p class="text-center font-bold text-xl bg-yellow-500 py-3"><%=@article.title %></p>
+    </div>
+  </div>
 </div>
+
+<div class="text-center bg-yellow-500 mx-auto my-6 p-4 rounded"><%= link_to 'Regresar', articles_path %></div>

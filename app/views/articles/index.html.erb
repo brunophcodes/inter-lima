@@ -1,13 +1,11 @@
 <div class="px-3 py-8 my-10 text-center">
-  <p>Mostrando todos los artículos</p>
-  <button class="bg-yellow-500 my-6 mx-5 p-3 rounded font-bold">
-  <%= link_to "Crear nuevo artículo", new_article_path %>
-  </button>
+  <p class="py-6 text-center font-bold">Mostrando todos los artículos</p>
+  <%= link_to "Crear nuevo artículo", new_article_path, class:"my-6 mx-5 p-3 bg-yellow-500 shadow-lg shadow-yellow-500/50 rounded hover:font-bold" %>
 </div>
 <table class="text-center">
   <tr>
-    <th>Title</th>
-    <th>Photo</th>
+    <th>Título</th>
+    <th>Foto</th>
   </tr>
   <% @articles.each do |article| %>
   <tr class="bg-yellow-500">

@@ -40,7 +40,5 @@ tabTogglers.forEach(function(toggler) {
 
     e.target.parentElement.classList.add()
 
-
-
   });
 });

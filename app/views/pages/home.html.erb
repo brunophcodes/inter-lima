@@ -11,21 +11,21 @@
 
 
 <!--Hero Section-->
-<div class="px-3 py-8 my-10 bg-neutral-950 flex flex-col items-center justify-center "> <!-- El color plomo es para visualizar el div-->
+<%# <div class="px-3 py-8 my-10 bg-neutral-950 flex flex-col items-center justify-center "> <!-- El color plomo es para visualizar el div-->
   <p class="text-4xl text-yellow-500 font-bold "> INTER DE LIMA </p>
-</div>
+</div> %>
 
 <section class="py-5 bg-gradient-to-b from-zinc-950 from-30% via-neutral-800 via-50% to-zinc-950 to-90%"> <!--Mejorar gradiente o cambiarlo a imagen de fondo-->
 
   <!--Carousel para noticias-->
-  <div class="text-center">
+  <div class="text-center py-6">
     <div class="mx-auto my-6 py-6 w-1/2 bg-pink-900 flex items-center justify-center">
       <%=image_tag("banner.jpg", class: "object-fill")%>
     </div>
   </div>
 
   <!--Equipos-->
-  <div id="teams" class="text-center text-xl font-bold">
+  <div id="teams" class="text-center text-xl font-bold py-6">
     <p> NUESTROS  <span class="text-yellow-500">EQUIPOS</span></p>
     <!--Juegos-->
     <div class="mx-auto my-6 py-6 inset-0 w-1/2 h-20 border-b border-yellow-500 ">
@@ -48,18 +48,17 @@
           <%= image_tag("DMS10.jpg") %>
           <div class="px-6 py-4 border-t-4 border-black">
             <div class="font-bold text-2xl text-center mb-2">DMS10</div>
-          </div>
         </div>
+      </div>
 
       <div class="max-w-sm rounded overflow-hidden shadow-lg bg-yellow-500">
-        <%= image_tag("MAGIC.png") %>
-        <div class="px-6 py-4 border-t-4 border-black">
-          <div class="font-bold text-2xl text-center mb-2">MAGIC</div>
+          <%= image_tag("MAGIC.png") %>
+          <div class="px-6 py-4 border-t-4 border-black">
+            <div class="font-bold text-2xl text-center mb-2">MAGIC</div>
+          </div>
         </div>
       </div>
     </div>
-
-  </div>
     <div id="tabs-content-2" class="hidden">
       <p class="text-gray-500 dark:text-gray-400">
         This is the <em class="font-semibold text-gray-800 dark:text-gray-200">second</em> item's tab body.
@@ -98,7 +97,7 @@
   </div>
 
   <!--Formulario de Contacto-->
-  <%# Practicar con esta card %>
+  
     <div id= "contact" class="text-center text-2xl font-bold my-6 py-6">
      <p> PONTE EN <span class="text-yellow-500"> CONTACTO</span> CON NOSOTROS</p>
     </div>

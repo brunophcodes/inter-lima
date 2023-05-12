@@ -19,9 +19,16 @@
 
   <!--Carousel para noticias-->
   <div class="text-center py-6">
-    <div class="mx-auto my-6 py-6 w-1/2 bg-pink-900 flex items-center justify-center">
-      <%=image_tag("banner.jpg", class: "object-fill")%>
-    </div>
+    <% Article.all.each do |article| %>
+      <div class="mx-auto my-6 py-6 w-1/2 bg-pink-900 flex items-center justify-center">
+        <div class="flex flex-col items-center justify-center">
+          <div class="max-w-xl overflow-hidden shadow-lg rounded-lg">
+            <%=image_tag(article.photo)%>
+            <p class="text-center font-bold text-xl bg-yellow-500 py-3"><%=article.title %></p>
+          </div>
+        </div>
+    <% end %>
+      </div>
   </div>
 
   <!--Equipos-->
@@ -97,7 +104,7 @@
   </div>
 
   <!--Formulario de Contacto-->
-  
+
     <div id= "contact" class="text-center text-2xl font-bold my-6 py-6">
      <p> PONTE EN <span class="text-yellow-500"> CONTACTO</span> CON NOSOTROS</p>
     </div>

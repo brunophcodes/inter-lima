@@ -22,6 +22,9 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   });
 });
 
+
+//"Our teams tabs animation config(Fifa/Valorant)"
+
 let tabsContainer = document.getElementById("tabs-container");
 
 let tabTogglers = tabsContainer.getElementsByTagName("button");

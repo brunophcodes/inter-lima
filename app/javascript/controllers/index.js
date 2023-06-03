@@ -21,27 +21,3 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
   });
 });
-
-
-//"Our teams tabs animation config(Fifa/Valorant)"
-
-let tabsContainer = document.getElementById("tabs-container");
-
-let tabTogglers = tabsContainer.getElementsByTagName("button");
-
-tabTogglers.forEach(function(toggler) {
-  toggler.addEventListener("click", function (e) {
-    e.preventDefault();
-
-    let tabContents = document.getElementById("tabs-content");
-
-    for (let i = 0; i < tabContents.children.length; i++) {
-      tabTogglers[i].classList.remove("text-yellow-500");
-      tabTogglers[i].classList.add("text-gray-500");
-      tabContents[i].classList.add("hidden");
-    }
-
-    e.target.parentElement.classList.add()
-
-  });
-});

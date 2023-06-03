@@ -11,9 +11,6 @@
 
 
 <!--Hero Section-->
-<%# <div class="px-3 py-8 my-10 bg-neutral-950 flex flex-col items-center justify-center "> <!-- El color plomo es para visualizar el div-->
-  <p class="text-4xl text-yellow-500 font-bold "> INTER DE LIMA </p>
-</div> %>
 
 <section class="py-5 bg-gradient-to-b from-zinc-950 from-30% via-neutral-800 via-50% to-zinc-950 to-90%"> <!--Mejorar gradiente o cambiarlo a imagen de fondo-->
 
@@ -32,46 +29,56 @@
   </div>
 
   <!--Equipos-->
-  <div id="teams" class="text-center text-xl font-bold py-6">
-    <p> NUESTROS  <span class="text-yellow-500">EQUIPOS</span></p>
-    <!--Juegos-->
-    <div class="mx-auto my-6 py-6 inset-0 w-1/2 h-20 border-b border-yellow-500 ">
-      <nav id="tabs-container" class="flex space-x-2 justify-center" aria-label="Tabs" role="tablist">
-        <button type="button" class="py-4 px-1 inline-flex items-center gap-2 border-b-[3px] border-transparent text-lg whitespace-nowrap text-yellow-500 hover:text-blue-600" id="tab-1">
-          <span> FIFA </span>
-        </button>
-        <button type="button" class="py-4 px-1 inline-flex items-center gap-2 border-b-[3px] border-transparent text-lg whitespace-nowrap text-gray-500 hover:text-blue-600" id="tab-2">
-          <span> VALORANT </span>
-        </button>
-      </nav>
-    </div>
-  </div>
-
-  <div id="tabs-content" class="mt-3 mx-auto flex justify-center">
-    <div id="tabs-content-1">
-      <!--Imágenes de jugadores-->
-      <div class="flex items-center justify-around space-x-10">
-        <div class="max-w-sm rounded overflow-hidden shadow-lg bg-yellow-500">
-          <%= image_tag("DMS10.jpg") %>
-          <div class="px-6 py-4 border-t-4 border-black">
-            <div class="font-bold text-2xl text-center mb-2">DMS10</div>
-        </div>
+  <div class="" x-data="{activeTab: 1}">
+    <div id="teams" class="text-center text-xl py-6">
+      <p> NUESTROS  <span class="text-yellow-500 font-bold">EQUIPOS</span></p>
+      <!--Juegos-->
+      <div class="mx-auto my-6 py-6 inset-0 w-1/2 h-20 border-b border-yellow-500 ">
+        <nav id="tabs-container" class="flex justify-center" aria-label="Tabs" role="tablist">
+          <button type="button"
+          class="py-3 px-3 inline-flex items-center gap-2 border border-b-0 border-yellow-500 focus:outline-none rounded-tl-md text-lg whitespace-nowrap  hover:underline"
+          :class="activeTab===1 ? 'font-bold text-yellow-500 bg-black' : ''"
+          @click="activeTab=1"
+          id="tab-1">
+            <span> FIFA </span>
+          </button>
+          <button type="button"
+          class="py-3 px-3 inline-flex items-center gap-2 border border-b-0 border-yellow-500 focus:outline-none rounded-tr-md text-lg whitespace-nowrap hover:underline"
+          :class="activeTab===2 ? 'font-bold text-yellow-500 bg-black' : ''"
+          @click="activeTab=2"
+          id="tab-2">
+            <span> VALORANT </span>
+          </button>
+        </nav>
       </div>
+    </div>
 
-      <div class="max-w-sm rounded overflow-hidden shadow-lg bg-yellow-500">
-          <%= image_tag("MAGIC.png") %>
-          <div class="px-6 py-4 border-t-4 border-black">
-            <div class="font-bold text-2xl text-center mb-2">MAGIC_JS7</div>
+    <div id="tabs-content" class="mt-3 mx-auto flex justify-center">
+      <!--Tab-1: FIFA players-->
+      <div id="tabs-content-1" x-show="activeTab===1">
+        <div class="flex items-center justify-around space-x-10">
+          <div class="max-w-sm rounded overflow-hidden shadow-lg bg-yellow-500">
+            <%= image_tag("DMS10.jpg") %>
+            <div class="px-6 py-4 border-t-4 border-black">
+              <div class="font-bold text-2xl text-center mb-2">DMS10</div>
+          </div>
+        </div>
+
+        <div class="max-w-sm rounded overflow-hidden shadow-lg bg-yellow-500">
+            <%= image_tag("MAGIC.png") %>
+            <div class="px-6 py-4 border-t-4 border-black">
+              <div class="font-bold text-2xl text-center mb-2">MAGIC_JS7</div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    <div id="tabs-content-2" class="hidden">
-      <p class="text-gray-500 dark:text-gray-400">
-        This is the <em class="font-semibold text-gray-800 dark:text-gray-200">second</em> item's tab body.
-      </p>
+      <!--Tab-2: Valorant players-->
+      <div id="tabs-content-2" x-show="activeTab===2">
+        <iframe width="980" height="640" src="https://www.youtube.com/embed/PW0tbayjePo" title="⚫🟡⚫ Nuevo equipo de Valorant 🔫💣 Empieza una nueva era en el Inter de Lima 🍫🍀" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      </div>
     </div>
   </div>
+
 
   <!--Redes Sociales-->
 

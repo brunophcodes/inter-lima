@@ -16,7 +16,7 @@
 
   <!--Carousel para noticias-->
    <div class="py-12 mx-auto w-1/2 ">
-    <swiper-container class="flex flex-col items-center justify-center" pagination="true" scrollbar="true">
+    <swiper-container class="flex flex-col items-center justify-center" autoplay="true" pagination="true" scrollbar="true">
           <% Article.all.each do |article| %>
               <swiper-slide>
                 <div class="max-w-full shadow-lg rounded-lg">

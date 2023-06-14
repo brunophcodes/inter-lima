@@ -15,7 +15,7 @@
   </head>
   <%= render 'layouts/navbar' %>
   <!--flex col y min h screen para tener el footer siempre al final-->
-  <body class="bg-hero bg-no-repeat bg-cover text-white flex flex-col min-h-screen">
+  <body class="bg-neutral-900 text-white flex flex-col min-h-screen">    <!--"bg-hero bg-no-repeat bg-cover text-white flex flex-col min-h-screen"-->
     <%= yield %>
     <% flash.each do |name, msg| %>
       <ul>

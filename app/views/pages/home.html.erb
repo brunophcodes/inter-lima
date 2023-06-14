@@ -1,6 +1,6 @@
 <!--HOMEPAGE-->
 
-<!--Sticky navbar de redes sociales-->
+<!--Social Media Sticky navbar-->
 
 <div class="fixed right-0 top-1/4 z-50 flex flex-col border-4 border-yellow-500 bg-black">
     <a href="https://www.instagram.com/interdelima/" class="mx-3 my-6 px-3 py-3 space-x-3"> <%= image_tag("instagram.png", class:"h-16 inline")%></a>
@@ -12,9 +12,9 @@
 
 <!--Hero Section-->
 
-<section class="py-5 bg-gradient-to-b from-zinc-950 from-30% via-neutral-800 via-50% to-zinc-950 to-90%"> <!--Mejorar gradiente o cambiarlo a imagen de fondo-->
+<section class="py-5 bg-gradient-to-b from-zinc-950 from-30% via-neutral-800 via-50% to-zinc-950 to-90%"> <!--Improve gradient or change to plain color-->
 
-  <!--Carousel para noticias-->
+  <!--Articles Carousel-->
    <div class="py-12 mx-auto w-1/2 ">
     <swiper-container class="flex flex-col items-center justify-center " autoplay="true" pagination="true" scrollbar="true">
           <% Article.all.each do |article| %>
@@ -28,11 +28,11 @@
     </swiper-container>
   </div>
 
-  <!--Equipos-->
+  <!--Teams-->
   <div class="" x-data="{activeTab: 1}">
     <div id="teams" class="text-center text-2xl font-bold py-6">
       <p> NUESTROS  <span class="text-yellow-500 font-bold">EQUIPOS</span></p>
-      <!--Juegos-->
+      <!--Games-->
       <div class="mx-auto my-6 py-6 inset-0 w-1/2 h-20 border-b border-yellow-500 ">
         <nav id="tabs-container" class="flex justify-center" aria-label="Tabs" role="tablist">
           <button type="button"
@@ -84,7 +84,7 @@
   </div>
 
 
-  <!--Redes Sociales-->
+  <!--Social Media-->
 
   <div class="text-center text-2xl font-bold my-6 py-6">
      <p> ENTÉRATE DE NUESTRAS <span class="text-yellow-500"> PRÓXIMAS JUGADAS</span></p>
@@ -106,7 +106,7 @@
     </div>
   </div>
 
-  <!--Formulario de Contacto-->
+  <!--Contact Form-->
 
     <div id= "contact" class="text-center text-2xl font-bold my-6 py-6">
      <p> PONTE EN <span class="text-yellow-500"> CONTACTO</span> CON NOSOTROS</p>
@@ -141,5 +141,4 @@
         </form>
       </div>
     </div>
-
 </section>

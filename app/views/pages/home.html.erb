@@ -17,7 +17,7 @@
   <!--Articles Carousel-->
    <div class="py-12 mx-auto w-1/2 ">
     <swiper-container class="flex flex-col items-center justify-center " autoplay="true" pagination="true" scrollbar="true">
-          <% Article.all.each do |article| %>
+          <% @banner_articles.each do |article| %>
               <swiper-slide>
                 <div class="max-w-full shadow-lg rounded-lg border-4 border-yellow-500">
                   <%= image_tag(article.photo, class:"object-fill m-0") %>

@@ -1,0 +1,26 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        // This allows you to debug a single file by executing that file with:
+        // ruby xxx.rb
+        {
+            "type": "rdbg",
+            "name": "Debug current file with rdbg",
+            "request": "launch",
+            "script": "${file}",
+            "args": [],
+            "askParameters": true
+        },
+        // This will attach to the debug server we just set up.
+        {
+            "type": "rdbg",
+            "name": "Attach with rdbg",
+            "debugPort": "1234",
+            "request": "attach",
+            // I'm using monolith and the server runs in docker,
+            // so I need to map the file, if you are runing the app locally, 
+            // this can be omitted
+            //"localfsMap": "/app:${workspaceFolder}/monolith"
+        }
+    ]
+}

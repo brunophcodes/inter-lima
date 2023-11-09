@@ -3,6 +3,6 @@ class PagesController < ApplicationController
     @banner_articles = Article.all.reverse
   end
 
-  def about
+  def about 
   end
 end

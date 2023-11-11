@@ -1,15 +1,20 @@
 <!--Presentation-->
-<div class="px-3 py-8 my-10 bg-neutral-950 flex flex-col items-center justify-center "> <!-- El color plomo es para visualizar el div-->
-  <p class="text-4xl  font-bold "> SOMOS <span class="text-yellow-500"> INTER DE LIMA </span></p>
+<div class="relative bg-about-us bg-center bg-no-repeat bg-cover h-80 md:h-96 px-3 py-4 mt-10 md:py-8">
+  <div class="absolute bottom-0 left-0 right-0 top-0 h-full w-full overflow-hidden bg-fixed"
+    style="background-color: rgba(0, 0, 0, 0.6)">
+    <div class="flex flex-col h-full justify-center items-center">
+      <p class="text-2xl md:text-4xl font-bold "> SOMOS <span class="text-yellow-500"> INTER DE LIMA </span></p>
+    </div>
+  </div>
 </div>
 
-<div class="mx-auto my-6 py-6 flex items-center justify-around">
-  <div class="text-center p-12">
-    <p class="text-2xl"> Somos un equipo peruano de esports, iniciamos en 2021 y </p>
-    <p class="text-2xl"> desde ese entonces no hemos parado 🍫 🍀</p>
+<div class="mx-auto my-6 py-4 md:py-6 md:flex items-center justify-around ">
+  <div class="text-center p-12 bg-yellow-600">
+    <p class="text-xl md:text-2xl"> Somos un equipo peruano de esports, iniciamos en 2021 y </p>
+    <p class="text-xl md:text-2xl"> desde ese entonces no hemos parado 🍫 🍀</p>
   </div>
   <div class="text-center space-x-2 p-12">
-      <%= image_tag("mosaico0.png", class:"h-96") %>
+      <%= image_tag("mosaico0.png", class:"h-96 border-4 border-rounded border-yellow-600") %>
   </div>
 </div>
 
@@ -27,11 +32,11 @@
  <div class="text-center text-2xl my-6 py-6">
     <p class="font-bold"> NUESTROS  <span class="text-yellow-500">CREADORES DE CONTENIDO</span></p>
     <!--Content Creators Container-->
-     <div class="flex items-center justify-around my-12">
-        <div class="max-w-sm rounded-2xl overflow-hidden shadow-lg border-4 border-yellow-500 bg-black">
+     <div class="mx-auto my-12 p-5 flex flex-col items-center justify-around xl:flex xl:flex-row">
+        <div class="max-w-sm rounded-2xl lg:shrink overflow-hidden shadow-lg border-4 border-yellow-500 bg-black">
           <%= image_tag("SWAMY.png") %>
           <div class="px-6 py-4 border-t-4 border-black">
-            <div class="font-bold text-2xl text-center mb-2">SWAMY</div>
+            <div class="font-bold text-2xl text-center mb-2">Swamy</div>
           <!--Twitch-->
             <div class="flex flex-row items-center justify-center">
               <a href="https://www.twitch.tv/iswamy" class="hover:opacity-50 flex flex-row items-center" target="_blank"> <svg viewBox="0 0 16 16" class="h-8 mx-2" xmlns="http://www.w3.org/2000/svg" fill="none"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path fill="#ffffff" d="M13 7.5l-2 2H9l-1.75 1.75V9.5H5V2h8v5.5z"></path> <g fill="#9146FF"> <path d="M4.5 1L2 3.5v9h3V15l2.5-2.5h2L14 8V1H4.5zM13 7.5l-2 2H9l-1.75 1.75V9.5H5V2h8v5.5z"></path> <path d="M11.5 3.75h-1v3h1v-3zM8.75 3.75h-1v3h1v-3z"></path> </g> </g></svg> </a>
@@ -41,10 +46,10 @@
           </div>
         </div>
 
-        <div class="max-w-sm rounded-2xl overflow-hidden shadow-lg border-4 border-yellow-500 bg-black">
+        <div class="max-w-sm rounded-2xl lg:shrink overflow-hidden shadow-lg border-4 border-yellow-500 bg-black">
           <%= image_tag("ZEKA.png") %>
           <div class="px-6 py-4 border-t-4 border-black">
-            <div class="font-bold text-2xl text-center mb-2">ZEKA</div>
+            <div class="font-bold text-2xl text-center mb-2">Zeka</div>
             <!--Twitch-->
             <div class="flex flex-row items-center justify-center">
               <a href="https://www.twitch.tv/zekagamerss" class="hover:opacity-50 flex flex-row items-center" target="_blank"> <svg viewBox="0 0 16 16" class="h-8 mx-2" xmlns="http://www.w3.org/2000/svg" fill="none"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path fill="#ffffff" d="M13 7.5l-2 2H9l-1.75 1.75V9.5H5V2h8v5.5z"></path> <g fill="#9146FF"> <path d="M4.5 1L2 3.5v9h3V15l2.5-2.5h2L14 8V1H4.5zM13 7.5l-2 2H9l-1.75 1.75V9.5H5V2h8v5.5z"></path> <path d="M11.5 3.75h-1v3h1v-3zM8.75 3.75h-1v3h1v-3z"></path> </g> </g></svg> </a>
@@ -54,10 +59,10 @@
           </div>
         </div>
 
-        <div class="max-w-sm rounded-2xl overflow-hidden shadow-lg border-4 border-yellow-500 bg-black">
+        <div class="max-w-sm rounded-2xl lg:shrink overflow-hidden shadow-lg border-4 border-yellow-500 bg-black">
           <%= image_tag("GABRIEL.png") %>
           <div class="px-6 py-4 border-t-4 border-black">
-            <div class="font-bold text-2xl text-center mb-2">GABRIEL ARTEAGA</div>
+            <div class="font-bold text-2xl text-center mb-2">GabrielArteaga</div>
             <!--Twitch-->
             <div class="flex flex-row items-center justify-center">
               <a href="https://www.twitch.tv/gabriellarteaga" class="hover:opacity-50" target="_blank"><svg viewBox="0 0 16 16" class="h-8 mx-2" xmlns="http://www.w3.org/2000/svg" fill="none"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path fill="#ffffff" d="M13 7.5l-2 2H9l-1.75 1.75V9.5H5V2h8v5.5z"></path> <g fill="#9146FF"> <path d="M4.5 1L2 3.5v9h3V15l2.5-2.5h2L14 8V1H4.5zM13 7.5l-2 2H9l-1.75 1.75V9.5H5V2h8v5.5z"></path> <path d="M11.5 3.75h-1v3h1v-3zM8.75 3.75h-1v3h1v-3z"></path> </g> </g></svg> </a>

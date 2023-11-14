@@ -1,6 +1,6 @@
 <div class="px-3 py-8 my-10 text-center">
   <p class="py-6 text-center font-bold text-2xl">Mostrando todos los artículos</p>
-  <%= link_to "Crear nuevo artículo", new_article_path, class:"my-6 mx-5 p-3 bg-yellow-600 text-lg rounded hover:font-bold hover:bg-yellow-500" %>
+  <%= link_to "Crear nuevo artículo", new_article_path, class:"my-6 mx-5 p-3 bg-yellow-500 text-lg rounded hover:font-bold hover:bg-yellow-600" %>
 </div>
 <table class="text-center font-bold border-separate border-spacing-2">
   <tr>
@@ -14,9 +14,9 @@
   <tr class="bg-yellow-600">
     <td><%= article.title %></td>
     <td><%= image_tag(article.photo, class:"h-32 inline hover:scale-150") %></td>
-    <td><%= link_to image_tag('edit_icon.png', class:'h-10 inline hover:scale-125'), edit_article_path(article) %></td>
-    <td><%= link_to image_tag('eye_icon.png', class:'h-10 inline hover:scale-125'), article_path(article) %></td>
-    <td><%= button_to image_tag('remove_icon.png', class:'h-10 inline hover:scale-125'), article_path(article), method: :delete, data: {confirm: "Are you sure?"} %></td>
+    <td><%= link_to image_tag('edit.svg', class:'h-10 inline hover:scale-125'), edit_article_path(article) %></td>
+    <td><%= link_to image_tag('show.svg', class:'h-10 inline hover:scale-125'), article_path(article) %></td>
+    <td><%= button_to image_tag('delete.svg', class:'h-10 inline hover:scale-125'), article_path(article), method: :delete, data: {confirm: "Are you sure?"} %></td>
   </tr>
   <% end %>
 </table>

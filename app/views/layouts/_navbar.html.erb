@@ -1,4 +1,4 @@
-<nav class="px-3 py-6 mb-5 bg-black flex items-center justify-around relative border-b-4 border-yellow-500"> <!--shadow md:flex md:items-center md:justify-around-->
+<nav class="px-3 py-6 bg-black flex items-center justify-around relative border-b-4 border-yellow-500"> <!--shadow md:flex md:items-center md:justify-around-->
   <!--contiene elementos del navbar-->
       <ul class="bg-black md:flex md:items-center text-yellow-500 z-[-1] md:z-auto md:static absolute">
       <%# primary menu %>
@@ -11,9 +11,9 @@
       </ul>
 
       <!--logo-->
-      <div class="mx-5 absolute top-1">
+      <div class="mx-5 absolute top-1 z-10">
         <span class="cursor-pointer">
-          <a href="home"><img class="h-24 inline md:h-28" src="https://pbs.twimg.com/profile_images/1445361197331668992/I3I9E2gA_400x400.png" alt="inter-lima"></a>
+          <%= link_to image_tag('logo_oscuro.png', class:'h-28 inline md:h-32'), home_path %>
         </span>
       </div>
 

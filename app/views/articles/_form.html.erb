@@ -11,11 +11,11 @@
   <div class="p-5 space-x-5 ">
     <%= form_for @article do |f| %>
     <p class>
-      <%= f.label :title, class: 'text-white' %><br>
+      <%= f.label :Título, class: 'text-white' %><br>
       <%= f.text_area :title, class:'text-black w-full'%>
     </p>
     <p class="my-6">
-      <%= f.label :photo, class: 'text-white' %><br>
+      <%= f.label :Imagen, class: 'text-white' %><br>
       <%= f.file_field :photo, onchange:"document.getElementById('uploaded-file').src = window.URL.createObjectURL(this.files[0])" %>
       <div class="max-w-2xl max-h-80" >
         <img id="uploaded-file" alt="Your image" width="100%" height="100%" />

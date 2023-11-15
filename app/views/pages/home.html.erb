@@ -37,17 +37,17 @@
         <nav id="tabs-container" class="flex justify-center" aria-label="Tabs" role="tablist">
           <button type="button"
           class="py-3 px-3 inline-flex items-center gap-2 border border-b-0 border-yellow-500 focus:outline-none rounded-tl-md text-lg whitespace-nowrap  hover:underline"
-          :class="activeTab===1 ? 'font-bold text-yellow-500 bg-black' : ''"
+          :class="activeTab===1 ? 'font-bold text-yellow-500 bg-yellow-500' : 'bg-zinc-600'"
           @click="activeTab=1"
           id="tab-1">
-            <span> FIFA </span>
+            <span> <%= image_tag("FIFA_logo.png", class:"max-w-sm h-8") %> </span>
           </button>
           <button type="button"
           class="py-3 px-3 inline-flex items-center gap-2 border border-b-0 border-yellow-500 focus:outline-none rounded-tr-md text-lg whitespace-nowrap hover:underline"
-          :class="activeTab===2 ? 'font-bold text-yellow-500 bg-black' : ''"
+          :class="activeTab===2 ? 'font-bold text-yellow-500 bg-yellow-500' : 'bg-zinc-600'"
           @click="activeTab=2"
           id="tab-2">
-            <span> VALORANT </span>
+            <span> <%= image_tag("Valorant_logo.png", class:"max-w-sm h-6") %> </span>
           </button>
         </nav>
       </div>
@@ -60,11 +60,11 @@
         <div class="md:flex items-center justify-around space-x-10">
           <!--DMS10 card-->
           <%= link_to "https://twitter.com/domenicosuarezo/with_replies", target: "_blank" do %>
-            <%= image_tag("DMS10_player_card.png", class:"max-w-sm") %>
+            <%= image_tag("DMS10_player_card.png", class:"max-w-sm hover:scale-110") %>
           <% end %>
           <!--MAGIC_JS7 card-->
            <%= link_to "https://twitter.com/MagicJs7/with_replies" , target: "_blank" do %>
-            <%= image_tag("MAGIC_player_card.png", class:"max-w-sm") %>
+            <%= image_tag("MAGIC_player_card.png", class:"max-w-sm hover:scale-110") %>
           <% end %>
         </div>
       </div>

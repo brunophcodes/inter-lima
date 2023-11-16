@@ -1,10 +1,20 @@
+<div class="absolute h-60 max-h-80 z-[-1] w-full">
+  <%=image_tag('article_background.jpeg', class:'w-full object-cover opacity-50') %>
+</div>
+
+<div class="w-100"> 
+  <%=image_tag(@article.photo, class:'mb-5 mx-auto mt-20 z-10')%>
+</div>
+
 <!--div wrapper-->
-<div class="flex flex-col my-6 py-6">
-  <p class="text-center py-6 font-bold text-2xl">Mostrando noticia seleccionada</p>
+<div class="flex flex-col my-3 py-3">  
   <div class="flex flex-col items-center justify-center">
     <div class="max-w-xl overflow-hidden shadow-lg rounded-lg">
-      <%=image_tag(@article.photo)%>
-      <p class="text-center font-bold text-xl bg-yellow-600 py-3"><%=@article.title %></p>
+      <p class="text-center font-bold text-3xl py-3"><%=@article.title %></p>
+      <p class="text-center text-xl py-3"><%=@article.created_at.strftime("%d %B %Y") %> - STAFF DE INTER DE LIMA</p>
+    </div>
+    <div class="w-1/2">
+      <p class="text-left text-xl py-3"><%=@article.body %></p>
     </div>
   </div>
 </div>

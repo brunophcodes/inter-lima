@@ -10,20 +10,24 @@
 <div class="container mx-auto my-6 rounded border border-yellow-500 bg-black text-black">
   <div class="p-5 space-x-5 ">
     <%= form_for @article do |f| %>
-    <p class>
+    <p>
       <%= f.label :Título, class: 'text-white' %><br>
-      <%= f.text_area :title, class:'text-black w-full'%>
+      <%= f.text_area :title, class:'text-black w-1/2 mb-5'%>
+    </p>
+    <p>
+      <%= f.label :Cuerpo, class: 'text-white' %><br>
+      <%= f.text_area :body, class:'text-black w-full'%>
     </p>
     <p class="my-6">
       <%= f.label :Imagen, class: 'text-white' %><br>
       <%= f.file_field :photo, onchange:"document.getElementById('uploaded-file').src = window.URL.createObjectURL(this.files[0])" %>
-      <div class="max-w-2xl max-h-80" >
+      <div class="max-w-2xl max-h-70 mx-auto mb-5" >
         <img id="uploaded-file" alt="Your image" width="100%" height="100%" />
       </div>
     </p>
-    <p class="my-6 pt-6">
-      <%= f.submit class:'focus:outline-none mt-5 bg-yellow-600 px-4 py-2 text-white rounded w-full hover:font-bold hover:bg-yellow-500' %>
-    </p>
+    <div class="mx-auto my-6 pt-6 max-w-min">
+      <%= f.submit class:'focus:outline-none bg-yellow-600 px-4 py-2 text-white rounded hover:font-bold hover:bg-yellow-500' %>
+    </div>
     <% end %>
   </div>
 </div>

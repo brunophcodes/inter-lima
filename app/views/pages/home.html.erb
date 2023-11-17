@@ -37,14 +37,14 @@
         <nav id="tabs-container" class="flex justify-center" aria-label="Tabs" role="tablist">
           <button type="button"
           class="py-3 px-3 inline-flex items-center gap-2 border border-b-0 border-yellow-500 focus:outline-none rounded-tl-md text-lg whitespace-nowrap  hover:underline"
-          :class="activeTab===1 ? 'font-bold text-yellow-500 bg-yellow-500' : 'bg-zinc-600'"
+          :class="activeTab===1 ? 'font-bold text-yellow-500 bg-yellow-500' : 'bg-zinc-600 opacity-50'"
           @click="activeTab=1"
           id="tab-1">
             <span> <%= image_tag("FIFA_logo.png", class:"max-w-sm h-8") %> </span>
           </button>
           <button type="button"
           class="py-3 px-3 inline-flex items-center gap-2 border border-b-0 border-yellow-500 focus:outline-none rounded-tr-md text-lg whitespace-nowrap hover:underline"
-          :class="activeTab===2 ? 'font-bold text-yellow-500 bg-yellow-500' : 'bg-zinc-600'"
+          :class="activeTab===2 ? 'font-bold text-yellow-500 bg-yellow-500' : 'bg-zinc-600 opacity-50'"
           @click="activeTab=2"
           id="tab-2">
             <span> <%= image_tag("Valorant_logo.png", class:"max-w-sm h-6") %> </span>

@@ -15,13 +15,13 @@
   </head>
   <%= render 'layouts/navbar' %>
   <!--flex col y min h screen para tener el footer siempre al final-->
-  <body class="bg-neutral-900 text-white flex flex-col min-h-screen">    <!--"bg-hero bg-no-repeat bg-cover text-white flex flex-col min-h-screen"-->
-      <%= yield %>
+  <body class="bg-neutral-900 text-white flex flex-col min-h-screen"> 
       <% flash.each do |name, msg| %>
         <ul>
-          <li><%= msg %></li>
+          <li class="bg-blue-100 text-blue-700 p-4 rounded-md top-1 mx-auto w-1/4 mt-9 float"><%= msg %></li>
         </ul>
-      <% end %>
+      <% end %>      
+      <%= yield %>
   </body>
   <%= render 'layouts/footer' %>
 </html>

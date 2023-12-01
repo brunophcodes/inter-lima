@@ -1,4 +1,4 @@
-<nav class="px-3 py-6 bg-black flex items-center justify-around relative border-b-4 border-yellow-500"> <!--shadow md:flex md:items-center md:justify-around-->
+<nav class="px-3 py-6 bg-black flex items-center justify-around relative border-b-4 border-yellow-500" data-controller="navbar"> <!--shadow md:flex md:items-center md:justify-around-->
   <!--contiene elementos del navbar-->
       <ul class="bg-black md:flex md:items-center text-yellow-500 z-[-1] md:z-auto md:static absolute">
       <%# primary menu %>
@@ -28,4 +28,28 @@
       </ul>
     </div>
   </div>
+
+<!--Admin -->
+  <%if admin_signed_in?%>
+    <div class="ml-auto absolute right-5 z-1">
+      <button class="flex items-center p-1" data-action="click->navbar#toggle">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 bg-white rounded-full p-1"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <circle cx="12" cy="6" r="4" stroke="#000000" stroke-width="1.5"></circle> <path d="M19.9975 18C20 17.8358 20 17.669 20 17.5C20 15.0147 16.4183 13 12 13C7.58172 13 4 15.0147 4 17.5C4 19.9853 4 22 12 22C14.231 22 15.8398 21.8433 17 21.5634" stroke="#000000" stroke-width="1.5" stroke-linecap="round"></path> </g></svg>
+      </button>
+   
+      <div class="hidden absolute float-left right-0 w-50 z-[1000] bg-white text-base text-black list-none divide-y divide-gray-100 rounded shadow my-4" id="dropdown" data-navbar-target="content">
+        <div class="px-4 py-3">
+          <span class="block text-sm">Admin - Inter de Lima</span>
+          <span class="block text-sm font-medium text-gray-900 truncate">admin@interdelima.com</span>
+        </div>
+          <ul class="p-3" aria-labelledby="dropdown">
+            <li>
+              <%= link_to "Index de Artículos", admin_index_path, class:"hover:text-yellow-500" %>
+            </li>
+            <li>
+              <%= link_to "Salir", destroy_admin_session_path , data: { turbo_method: :delete }, class:"hover:text-yellow-500" %>
+            </li>
+          </ul>
+      </div>
+    </div>
+  <%end%>
 </nav>

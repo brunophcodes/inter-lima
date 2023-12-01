@@ -1,0 +1,30 @@
+<div class="mx-auto my-auto p-5">
+  <h2 class="text-center text-yellow-500 text-2xl font-bold my-10">Iniciar Sesión</h2>
+
+  <%= form_for(resource, as: resource_name, url: session_path(resource_name), data: { turbo: false }) do |f| %>
+    <div class="field space-y-3 text-xl">
+      <%= f.label :correo_electrónico %><br />
+      <%= f.email_field :email, autofocus: true, autocomplete: "email", class:"text-black" %>
+    </div>
+
+    <div class="field space-y-3 mb-5">
+      <%= f.label :contraseña %><br />
+      <%= f.password_field :password, autocomplete: "current-password" , class:"text-black" %>
+    </div>
+
+    <% if devise_mapping.rememberable? %>
+      <div class="field mb-5">
+        <%= f.check_box :remember_me %>
+        <%= f.label :recordar_cuenta %>
+      </div>
+    <% end %>
+
+    <div class="actions">
+      <%= f.submit "Log In",class:"my-5 p-3 bg-yellow-500 text-lg font-bold rounded hover:bg-yellow-600" %>
+    </div>
+  <% end %>
+
+  <div class="p-4 text-lg font-bold rounded hover:text-yellow-600">
+      <%= render "devise/shared/links" %>
+  </div>
+</div>

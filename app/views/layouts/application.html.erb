@@ -15,10 +15,15 @@
   </head>
   <%= render 'layouts/navbar' %>
   <!--flex col y min h screen para tener el footer siempre al final-->
-  <body class="bg-neutral-900 text-white flex flex-col min-h-screen"> 
+  <body class="bg-neutral-900 text-white flex flex-col min-h-screen relative"> 
       <% flash.each do |name, msg| %>
-        <ul>
-          <li class="bg-blue-100 text-blue-700 p-4 rounded-md top-1 mx-auto w-1/4 mt-9 float"><%= msg %></li>
+        <ul data-controller="flash" class="flex items-center absolute justify-between <%= css_class_for_flash(name) %> p-4 rounded-md top-20 right-4 w-1/4 mt-5 ml-auto float mr-4 z-[1000] top-20absolute">
+          <li class="mr-4"><%= msg %></li>
+          <button type="button" data-action="flash#dismiss">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+        </button>
         </ul>
       <% end %>      
       <%= yield %>

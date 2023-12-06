@@ -6,7 +6,7 @@
   <%=image_tag(@article.photo, class:'mb-5 mx-auto mt-20 z-10')%>
 </div>
 
-<!--div wrapper-->
+<!--Article body-->
 <div class="flex flex-col my-3 py-3">  
   <div class="flex flex-col items-center justify-center">
     <div class="max-w-xl overflow-hidden shadow-lg rounded-lg">
@@ -19,4 +19,9 @@
   </div>
 </div>
 
-<div class="text-center bg-yellow-600 mx-auto my-6 p-4 rounded hover:font-bold hover:bg-yellow-500"><%= link_to 'Regresar', :back %></div>
+
+  <%if admin_signed_in?%>
+    <%= link_to 'Regresar', admin_index_path, class:"text-center bg-yellow-600 mx-auto my-6 p-4 rounded hover:font-bold hover:bg-yellow-500"%>
+  <%else%>
+    <%= link_to 'Regresar', :back, class:"text-center bg-yellow-600 mx-auto my-6 p-4 rounded hover:font-bold hover:bg-yellow-500" %>
+  <%end%>

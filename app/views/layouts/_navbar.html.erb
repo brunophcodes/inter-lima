@@ -1,6 +1,29 @@
 <nav class="px-3 py-6 bg-black flex items-center justify-around relative border-b-4 border-yellow-500" data-controller="navbar"> <!--shadow md:flex md:items-center md:justify-around-->
-  <!--contiene elementos del navbar-->
-      <ul class="bg-black md:flex md:items-center text-yellow-500 z-[-1] md:z-auto md:static absolute">
+  <!--Responsive Navbar button-->
+  <div class="absolute left-3 z-100">
+    <button data-action="click->navbar#toggle_sections" class="p-2 md:hidden text-white bg-white border border-transparent rounded focus:border-blue-500 focus:ring-opacity-40 focus:ring-blue-300  focus:ring dark:bg-gray-800 focus:outline-none">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 20 20" fill="currentColor">
+            <path d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z" />
+        </svg>
+    </button>
+    <!--Responsive Navbar sections-->
+    <div class="hidden absolute float-right left-0 w-50 z-[1000] bg-zinc-600 text-base text-yellow-400 list-none rounded shadow my-4" id="dropdown" data-navbar-target="menu" data-action="resize@window->navbar#closeOnBigScreen">
+      <li class="mx-5 text-base font-bold my-6 md:my-0">
+          <a href="/home#teams" class="text-base md:text-xl hover:underline"> EQUIPOS </a>
+      </li>
+      <li class="mx-5 text-base font-bold my-6 md:my-0">
+          <a href="/articles" class="text-x1 md:text-lg sm:text-base hover:underline"> NOTICIAS</a> <!--TO DO: add the articles/news route -->
+      </li>
+      <li class="mx-5 text-base font-bold my-6 md:my-0">
+          <a href="/about" class="text-x1 md:text-lg sm:text-base hover:underline" > NOSOTROS</a>
+      </li>
+      <li class="mx-5 text-base font-bold my-6 md:my-0">
+          <a href="/home#contact" class="text-x1 md:text-lg sm:text-base hover:underline"> CONTACTO</a>
+      </li>
+    </div>
+  </div>
+  
+  <ul class="hidden bg-black md:flex md:items-center text-yellow-500 z-[-1] md:z-auto md:static absolute">
       <%# primary menu %>
         <li class="mx-5 text-base font-bold my-6 md:my-0">
           <a href="/home#teams" class="text-base md:text-xl hover:underline"> EQUIPOS </a>
@@ -11,35 +34,34 @@
       </ul>
 
       <!--logo-->
-      <div class="mx-5 absolute top-1 z-10">
+      <div class="absolute top-1 z-10">
         <span class="cursor-pointer">
           <%= link_to image_tag('logo_oscuro.png', class:'h-28 inline md:h-32'), home_path %>
         </span>
       </div>
 
       <%# secondary menu %>
-      <ul class="bg-black md:flex md:items-center text-yellow-500 z-[-1] md:z-auto md:static absolute">
+      <ul class="hidden bg-black md:flex md:items-center text-yellow-500 z-[-1] md:z-auto md:static absolute">
         <li class="mx-5 text-base font-bold my-6 md:my-0">
           <a href="/about" class="text-x1 md:text-lg sm:text-base hover:underline" > NOSOTROS</a>
         </li>
         <li class="mx-5 text-base font-bold my-6 md:my-0">
           <a href="/home#contact" class="text-x1 md:text-lg sm:text-base hover:underline"> CONTACTO</a>
         </li>
-      </ul>
-    </div>
-  </div>
+  </ul>
+
 
 <!--Admin -->
   <%if admin_signed_in?%>
     <div class="ml-auto absolute right-5 z-1">
-      <button class="flex items-center p-1" data-action="click->navbar#toggle">
-        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 bg-white rounded-full p-1"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <circle cx="12" cy="6" r="4" stroke="#000000" stroke-width="1.5"></circle> <path d="M19.9975 18C20 17.8358 20 17.669 20 17.5C20 15.0147 16.4183 13 12 13C7.58172 13 4 15.0147 4 17.5C4 19.9853 4 22 12 22C14.231 22 15.8398 21.8433 17 21.5634" stroke="#000000" stroke-width="1.5" stroke-linecap="round"></path> </g></svg>
+      <button class="flex items-center p-1" data-action="click->navbar#toggle_admin">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 md:h-12 md:w-12 bg-white rounded-full p-1"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <circle cx="12" cy="6" r="4" stroke="#000000" stroke-width="1.5"></circle> <path d="M19.9975 18C20 17.8358 20 17.669 20 17.5C20 15.0147 16.4183 13 12 13C7.58172 13 4 15.0147 4 17.5C4 19.9853 4 22 12 22C14.231 22 15.8398 21.8433 17 21.5634" stroke="#000000" stroke-width="1.5" stroke-linecap="round"></path> </g></svg>
       </button>
    
-      <div class="hidden absolute float-left right-0 w-50 z-[1000] bg-white text-base text-black list-none divide-y divide-gray-100 rounded shadow my-4" id="dropdown" data-navbar-target="content">
+      <div class="hidden absolute float-left right-0 w-50 z-[1000] bg-zinc-600 text-base text-yellow-400 list-none divide-y divide-gray-100 rounded shadow my-4" id="dropdown" data-navbar-target="admin">
         <div class="px-4 py-3">
           <span class="block text-sm">Admin - Inter de Lima</span>
-          <span class="block text-sm font-medium text-gray-900 truncate">admin@interdelima.com</span>
+          <span class="block text-sm font-medium text-white truncate">admin@interdelima.com</span>
         </div>
           <ul class="p-3" aria-labelledby="dropdown">
             <li>

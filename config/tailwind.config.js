@@ -12,6 +12,9 @@ module.exports = {
       backgroundImage: {
         'about-us': "url('about_us.jpeg')",
       },
+      backgroundPosition: {
+        'top-28': 'center top -28rem',
+      },
       fontFamily: {
         sans: ['Inter var', ...defaultTheme.fontFamily.sans],
       },

@@ -42,4 +42,4 @@ preload_app!
 # Allow puma to be restarted by `bin/rails restart` command.
 plugin :tmp_restart
 
-require 'debug/open_nonstop'
+#require 'debug/open_nonstop'

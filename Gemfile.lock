@@ -155,6 +155,7 @@ GEM
     parser (3.2.2.4)
       ast (~> 2.4.1)
       racc
+    pg (1.5.4)
     prism (0.17.1)
     public_suffix (5.0.1)
     puma (5.6.5)
@@ -248,7 +249,6 @@ GEM
       actionpack (>= 5.2)
       activesupport (>= 5.2)
       sprockets (>= 3.0.0)
-    sqlite3 (1.6.1-x86_64-linux)
     stimulus-rails (1.2.1)
       railties (>= 6.0.0)
     tailwindcss-rails (2.0.25-x86_64-linux)
@@ -294,13 +294,13 @@ DEPENDENCIES
   importmap-rails
   jbuilder
   letter_opener
+  pg
   puma (~> 5.0)
   rails (~> 7.0.4)
   ruby-lsp
   selenium-webdriver
   solargraph
   sprockets-rails
-  sqlite3 (~> 1.4)
   stimulus-rails
   tailwindcss-rails (~> 2.0)
   turbo-rails

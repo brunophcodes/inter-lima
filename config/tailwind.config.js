@@ -10,7 +10,7 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        'about-us': "url('about_us.jpeg')",
+        'about-us': "url('about_us.jpg')",
       },
       backgroundPosition: {
         'top-28': 'center top -28rem',

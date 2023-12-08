@@ -5,7 +5,8 @@
 #   gem "sqlite3"
 #
 default: &default
-  adapter: sqlite3
+  adapter: postgresql  
+  encoding: unicode
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   timeout: 5000
 
@@ -22,4 +23,8 @@ test:
 
 production:
   <<: *default
-  database: db/production.sqlite3
+  database: inter_lima_production
+  username: inter_lima
+  password: <%= ENV['MYSITE_DATABASE_PASSWORD'] %>
+  # <<: *default
+  # database: db/production.sqlite3

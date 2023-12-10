@@ -15,7 +15,7 @@ Rails.application.configure do
   config.consider_all_requests_local = true
 
   # Enabling RailwayApp to deploy
-  config.hosts << 'rails-production-ddcb.up.railway.app'
+  config.hosts << 'inter-lima-production.up.railway.app'
 
   # Enable server timing
   config.server_timing = true

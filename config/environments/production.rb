@@ -7,7 +7,7 @@ Rails.application.configure do
   config.cache_classes = true
 
   # Enabling RailwayApp to deploy
-  config.hosts << 'rails-production-ddcb.up.railway.app'
+  config.hosts << 'inter-lima-production.up.railway.app'
 
   # Eager load code on boot. This eager loads most of Rails and
   # your application in memory, allowing both threaded web servers

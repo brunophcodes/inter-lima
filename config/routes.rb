@@ -9,5 +9,9 @@ Rails.application.routes.draw do
   get 'home', to: 'pages#home'
   get 'about', to: 'pages#about'
   get 'admin_index', to: 'articles#admin_index'
+  get '/404', to: 'errors#not_found'
+  get '/406', to: 'errors#unacceptable'
+  get '/500', to: 'errors#internal_server'
+  get '/422', to: 'errors#unprocessable'
   resources :articles
 end

@@ -7,7 +7,7 @@
       <%= f.email_field :email, autofocus: true, autocomplete: "email", class:"text-black" %>
     </div>
 
-    <div class="field space-y-3 mb-5">
+    <div class="field space-y-3 text-xl mb-5">
       <%= f.label :contraseña %><br />
       <%= f.password_field :password, autocomplete: "current-password" , class:"text-black" %>
     </div>
@@ -20,11 +20,7 @@
     <% end %>
 
     <div class="actions">
-      <%= f.submit "Log In",class:"my-5 p-3 bg-yellow-500 text-lg font-bold rounded hover:bg-yellow-600" %>
+      <%= f.submit "Ingresar",class:"my-5 p-3 bg-yellow-500 text-lg font-bold rounded hover:bg-yellow-600" %>
     </div>
   <% end %>
-
-  <div class="p-4 text-lg font-bold rounded hover:text-yellow-600">
-      <%= render "devise/shared/links" %>
-  </div>
 </div>

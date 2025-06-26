@@ -33,8 +33,9 @@ gem 'letter_opener', group: :development
 # Ruby-LSP
 gem 'ruby-lsp', require: false
 
-# Solargraph
-gem 'solargraph', require: false
+gem 'prism', '>= 0.18.0'
+
+gem 'nio4r', '>= 2.5.8'
 
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'

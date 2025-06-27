@@ -73,5 +73,9 @@
           </ul>
       </div>
     </div>
+  <% else %>
+    <div class="ml-auto absolute right-5 z-1">
+      <%= button_to "Demo User", admins_sign_as_demo_path, class:"btn text-yellow-400 font-bold bg-zinc-600 me-2 rounded p-2" %>
+    </div>
   <%end%>
 </nav>

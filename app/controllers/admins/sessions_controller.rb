@@ -3,6 +3,14 @@
 class Admins::SessionsController < Devise::SessionsController
   # before_action :configure_sign_in_params, only: [:create]
 
+  def sign_as_demo
+    @demo_user ||= Admin.find_by_email('admin@interdelima.com')
+    if current_admin.nil?
+      sign_in(@demo_user)
+      redirect_to admin_index_path, notice: 'Signed in as demo user.'
+    end
+  end
+
   # GET /resource/sign_in
   # def new
   #   super

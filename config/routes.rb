@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
   devise_for :admins
+  devise_scope :admin do
+    post '/admins/sign_as_demo' => 'admins/sessions#sign_as_demo'
+    get '/admins/sign_out' => 'devise/sessions#destroy'
+  end
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")

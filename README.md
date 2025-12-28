@@ -1,24 +1,44 @@
 # README
+# Inter-Lima - Blog de equipo de E-Sports
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+![Ruby on Rails](https://img.shields.io/badge/Framework-Ruby%20on%20Rails%207-red)
+![Ruby](https://img.shields.io/badge/Language-Ruby%203.x-red)
+![PostgreSQL](https://img.shields.io/badge/Database-PostgreSQL-blue)
 
-Things you may want to cover:
+## 🚀 Sobre el Proyecto
 
-* Ruby version
+Inter-Lima es un sistema de gestión de contenidos (CMS) diseñado con un enfoque en **escalabilidad** y **seguridad**. Este proyecto demuestra la implementación de un CRUD completo siguiendo las mejores prácticas de Rails, incluyendo autenticación de administradores y manejo eficiente de recursos.
 
-* System dependencies
+## 🛠️ Stack Técnico
 
-* Configuration
+* **Backend:** Ruby on Rails 7.
+* **Base de Datos:** PostgreSQL.
+* **Autenticación:** Devise (Admin Authentication).
+* **Frontend:** Rails Views con diseño responsivo.
 
-* Database creation
+## ⚙️ Características Destacadas
 
-* Database initialization
+* **Arquitectura DRY:** Uso de `before_action` para la gestión centralizada de recursos.
+* **Optimización de Consultas:** Implementación de ordenamiento a nivel de base de datos (`order(created_at: :desc)`) para evitar carga excesiva en memoria.
+* **Seguridad:** Parámetros fuertes (`Strong Parameters`) y restricciones de acceso para roles administrativos.
+* **UX/UI:** Sistema de notificaciones mediante `flash messages` para feedback inmediato al usuario.
 
-* How to run the test suite
+## 📦 Instalación y Configuración
 
-* Services (job queues, cache servers, search engines, etc.)
+1. **Clonar el repositorio:**
+   ```bash
+   git clone [https://github.com/tu-usuario/inter-lima.git](https://github.com/tu-usuario/inter-lima.git)
+   cd inter-lima
 
-* Deployment instructions
+2. **Instalar dependencias:**
+   ```bash
+   bundle install
 
-* ...
+3. **Configurar la base de datos:**
+   ```bash
+   rails db:create
+   rails db:migrate
+   
+4. **Iniciar el servidor:**
+   ```bash
+   rails server

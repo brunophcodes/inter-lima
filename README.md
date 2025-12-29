@@ -27,7 +27,7 @@ Inter-Lima es un sistema de gestión de contenidos (CMS) diseñado con un enfoqu
 
 1. **Clonar el repositorio:**
    ```bash
-   git clone [https://github.com/tu-usuario/inter-lima.git](https://github.com/tu-usuario/inter-lima.git)
+   git clone [https://github.com/brunophcodes/inter-lima.git](https://github.com/brunophcodes/inter-lima.git)
    cd inter-lima
 
 2. **Instalar dependencias:**
@@ -42,3 +42,6 @@ Inter-Lima es un sistema de gestión de contenidos (CMS) diseñado con un enfoqu
 4. **Iniciar el servidor:**
    ```bash
    rails server
+## 🛤️ Roadmap / Próximas Implementaciones
+[X] GraphQL API: Implementación de nodos para consultas eficientes desde el frontend.
+[ ] Paginación: Integración de la gema Pagy para manejo de grandes volúmenes de datos.

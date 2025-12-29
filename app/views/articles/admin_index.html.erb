@@ -18,7 +18,7 @@
     <tr class="bg-yellow-600">
       <td class="w-1/5"><%= article.title %></td>
       <td><%= truncate article.body %></td>
-      <td class="w-1/3"><%= image_tag(article.photo, class:"h-32 inline hover:scale-150") %></td>
+      <td class="w-1/3"><% if article.photo.attached? %> <%= image_tag(article.photo, class:"h-32 inline hover:scale-150") %> <% else %>  <%= image_tag("default-placeholder.png", class: "h-32 inline hover:scale-150")%><% end %> </td>
       <td class="w-1/5"><%= local_time(article.created_at,'%e %B, %Y %l:%M%P') %></td>
       <td><%= link_to image_tag('edit.svg', class:'h-8 md:h-10 inline hover:scale-125'), edit_article_path(article) %></td>
       <td><%= link_to image_tag('show.svg', class:'h-8 md:h-10 inline hover:scale-125'), article_path(article) %></td>

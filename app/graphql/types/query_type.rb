@@ -2,7 +2,7 @@
 
 module Types
   class QueryType < Types::BaseObject
-    field :all_articles, [Types::ArticleType], null: false, description: "Returns a list of articles"
+    field :all_articles, Types::ArticleType.connection_type, null: false, description: "Returns a list of articles"
 
     def all_articles
       Article.order(created_at: :desc)

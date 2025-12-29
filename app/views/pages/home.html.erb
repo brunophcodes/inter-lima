@@ -21,7 +21,11 @@
               <swiper-slide>
                 <div class="max-w-full shadow-lg rounded-lg border-4 border-yellow-500">
                   <%= link_to article do %>
+                  <% if article.photo.attached? %>
                     <%= image_tag(article.photo, class:"object-fill m-0") %>
+                  <% else %>
+                    <%= image_tag "default-placeholder.png" %>
+                  <% end %>
                     <p class="text-center font-bold text-lg md:text-2xl bg-yellow-500 py-8"><%=article.title %></p>
                   <%end%>
                 </div>

@@ -5,7 +5,7 @@ module Types
     field :all_articles, Types::ArticleType.connection_type, null: false, description: "Returns a list of articles"
 
     def all_articles
-      Article.order(created_at: :desc)
+      Article.with_attached_photo.order(created_at: :desc)
     end
     
     field :node, Types::NodeType, null: true, description: "Fetches an object given its ID." do

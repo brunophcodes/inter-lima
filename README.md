@@ -43,5 +43,5 @@ Inter-Lima es un sistema de gestión de contenidos (CMS) diseñado con un enfoqu
    ```bash
    rails server
 ## 🛤️ Roadmap / Próximas Implementaciones
-[X] GraphQL API: Implementación de nodos para consultas eficientes desde el frontend.
-[ ] Paginación: Integración de la gema Pagy para manejo de grandes volúmenes de datos.
+* [X] GraphQL API: Implementación de nodos para consultas eficientes desde el frontend.
+* [ ] Paginación: Integración de la gema Pagy para manejo de grandes volúmenes de datos.

@@ -87,4 +87,4 @@ gem "devise", "~> 4.9"
 
 gem "local_time"
 gem "graphql", "~> 2.5"
-gem "graphiql-rails", group: :development
+gem "graphiql-rails"
